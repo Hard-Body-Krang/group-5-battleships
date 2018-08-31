@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# README #
 
-You can use the [editor on GitHub](https://github.com/Hard-Body-Krang/group-5-battleships/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This project is an implementation of the classic Battleship game.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Requirements:
 
-### Markdown
+* Windows machine or Mono installed
+* Unix command line (use something like MSYS2 on Windows)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To get started:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Hard-Body-Krang/group-5-battleships/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+1. Clone project
+1. Open command line and cd to project root
+1. Build using `build.sh`
+1. Run using `run.sh` -- you can also find the executable in the bin folder, but this script makes it simpler to build and run from the command line.
