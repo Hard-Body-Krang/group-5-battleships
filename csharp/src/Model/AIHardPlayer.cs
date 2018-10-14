@@ -348,5 +348,4 @@ public class AIHardPlayer : AIPlayer
 			_Targets.Push(new Target(new Location(row, column), _CurrentTarget.ShotAt));
 		}
 	}
-
 }

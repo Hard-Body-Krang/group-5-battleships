@@ -1,4 +1,3 @@
-
 /// <summary>
 /// The result of an attack.
 /// </summary>
@@ -29,10 +28,3 @@ public enum ResultOfAttack
 	/// </summary>
 	GameOver
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

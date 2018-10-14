@@ -1,4 +1,3 @@
-
 using System;
 using SwinGameSDK;
 /// <summary>
@@ -99,8 +98,6 @@ public abstract class AIPlayer : Player
             return Column ^ Row;
         }
     }
-
-
 	public AIPlayer(BattleShipsGame game) : base(game)
 	{
 	}
