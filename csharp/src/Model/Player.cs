@@ -1,10 +1,8 @@
 
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-//using System.Data;
-using System.Diagnostics;
+
 /// <summary>
 /// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
 /// all ships are deployed and if all ships are detroyed. A Player can also attach.
@@ -181,9 +179,11 @@ public class Player : IEnumerable<Ship>
 	/// <returns>the result of the attack</returns>
 	internal AttackResult Shoot(int row, int col)
 	{
-		_shots += 1;
 		AttackResult result = default(AttackResult);
 		result = EnemyGrid.HitTile(row, col);
+
+        //Increment shot count only if the tile has not been shot already.
+        if (result.Value != ResultOfAttack.ShotAlready) _shots += 1;
 
 		switch (result.Value) {
 			case ResultOfAttack.Destroyed:
