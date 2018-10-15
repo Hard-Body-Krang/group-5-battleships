@@ -1,10 +1,5 @@
-
-using Microsoft.VisualBasic;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-//using System.Data;
-using System.Diagnostics;
 using SwinGameSDK;
 
 /// <summary>
@@ -51,6 +46,10 @@ public static class GameController
 		get { return _ai; }
 	}
 
+
+    /// <summary>
+    /// Manages current state
+    /// </summary>
 	static GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -99,8 +98,7 @@ public static class GameController
 	/// <summary>
 	/// Stops listening to the old game once a new game is started
 	/// </summary>
-
-	private static void EndGame()
+    private static void EndGame()
 	{
 		//RemoveHandler _human.PlayerGrid.Changed, AddressOf GridChanged
 		_ai.PlayerGrid.Changed -= GridChanged;
@@ -119,7 +117,13 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
-	private static void PlayHitSequence(int row, int column, bool showAnimation)
+    /// <summary>
+    /// Plays audiovisual feedback when the player hits a ship
+    /// </summary>
+    /// <param name="row">The X coorinate of the hit</param>
+    /// <param name="column">The Y coordinate of the hit</param>
+    /// <param name="showAnimation">Weather or not the animation should play</param>
+    private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
 			UtilityFunctions.AddExplosion(row, column);
@@ -130,6 +134,12 @@ public static class GameController
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
+    /// <summary>
+    /// Audiovisual feedback when the player mises
+    /// </summary>
+    /// <param name="row">The X coordinate of the miss</param>
+    /// <param name="column">The Y coordninate of the miss</param>
+    /// <param name="showAnimation">Weather or not the animation should play</param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
