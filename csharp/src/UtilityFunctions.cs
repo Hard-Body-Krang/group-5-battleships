@@ -175,9 +175,10 @@ static class UtilityFunctions
 		int shipHeight = 0;
 		int shipWidth = 0;
 		string shipName = null;
-
-		//Draw the ships
-		foreach (Ship s in thePlayer) {
+        /// <summary>
+        /// draws the ship
+        /// </summary>
+        foreach (Ship s in thePlayer) {
 			if (s == null || !s.IsDeployed)
 				continue;
 			rowTop = top + (cellGap + cellHeight) * s.Row + SHIP_GAP;
@@ -271,9 +272,16 @@ static class UtilityFunctions
 		AddAnimation(row, col, "Splash");
 	}
 
+    /// <summary>
+    /// creating a list of animation objects
+    /// </summary>
+    private static List<Sprite> _Animations = new List<Sprite>();
 
-	private static List<Sprite> _Animations = new List<Sprite>();
-	private static void AddAnimation(int row, int col, string image)
+
+    /// <summary>
+    /// adds animation when called
+    /// </summary>
+    private static void AddAnimation(int row, int col, string image)
 	{
 		Sprite s = default(Sprite);
 		Bitmap imgObj = default(Bitmap);
